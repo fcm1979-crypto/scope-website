@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidad — Scope</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #1A1A2E; background: #fff; line-height: 1.7; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; border-bottom: 1px solid #EBEBF8; }
+    .nav-logo { font-size: 18px; font-weight: 800; color: #534AB7; text-decoration: none; letter-spacing: 0.1em; }
+    main { max-width: 720px; margin: 60px auto; padding: 0 24px 80px; }
+    h1 { font-size: 32px; font-weight: 800; margin-bottom: 8px; }
+    .updated { font-size: 13px; color: #6B6B8A; margin-bottom: 40px; }
+    h2 { font-size: 20px; font-weight: 700; margin: 36px 0 12px; }
+    p, li { font-size: 15px; color: #3A3A5C; margin-bottom: 12px; }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 6px; }
+    .highlight { background: #F0EEFF; border-left: 4px solid #534AB7; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 24px 0; }
+    .highlight p { margin: 0; color: #1A1A2E; font-weight: 500; }
+    footer { background: #1A1A2E; color: rgba(255,255,255,0.6); text-align: center; padding: 32px 20px; font-size: 13px; }
+    footer a { color: rgba(255,255,255,0.6); }
+    a { color: #534AB7; }
+  </style>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo">🔭 SCOPE</a>
+</nav>
+<main>
+  <h1>Política de Privacidad</h1>
+  <p class="updated">Última actualización: junio de 2026</p>
+
+  <div class="highlight">
+    <p>Resumen en una línea: Scope no recopila, almacena ni vende tu historial de navegación. Nunca. Es exactamente lo contrario de lo que hace WOT.</p>
+  </div>
+
+  <h2>1. Quiénes somos</h2>
+  <p>Scope es una extensión de Chrome desarrollada de forma independiente. Puedes contactarnos en <a href="mailto:hola@getscope.app">hola@getscope.app</a>.</p>
+
+  <h2>2. Qué datos NO recopilamos</h2>
+  <ul>
+    <li>Tu historial de navegación</li>
+    <li>Las URLs de los sitios que visitas (más allá de lo descrito abajo)</li>
+    <li>Datos personales de ningún tipo</li>
+    <li>Dirección IP, dispositivo, o información de identificación</li>
+  </ul>
+
+  <h2>3. Qué hace Scope con los datos</h2>
+  <p><strong>Detección de trackers (completamente local):</strong> Scope compara los dominios de terceros cargados en la página contra una base de datos incluida en la extensión. Esta comparación ocurre únicamente en tu dispositivo. Ningún dato sale de tu navegador para este proceso.</p>
+
+  <p><strong>Consultas de seguridad (por sitio visitado):</strong> Cuando visitas un sitio web, Scope envía la URL de ese sitio a nuestro servidor intermedio (Cloudflare Worker), que a su vez consulta:</p>
+  <ul>
+    <li>Google Safe Browsing API — para comprobar si el sitio está en listas de phishing o malware</li>
+    <li>VirusTotal API — para comprobar si motores antivirus lo marcan como peligroso</li>
+  </ul>
+  <p>Estas consultas son únicamente sobre el sitio que estás visitando, no sobre ti. Nuestro servidor no registra estas consultas ni las asocia con ningún usuario.</p>
+
+  <p><strong>Antigüedad del dominio:</strong> Scope consulta el servicio público RDAP de ICANN (rdap.org) para obtener la fecha de registro del dominio. Este servicio es público y no requiere identificación.</p>
+
+  <h2>4. Almacenamiento local</h2>
+  <p>Scope utiliza <code>chrome.storage.local</code> para almacenar en tu propio navegador:</p>
+  <ul>
+    <li>El número de veces que has abierto el popup (para el prompt de reseña)</li>
+    <li>Tu clave de licencia Pro (si la tienes), para no validarla en cada visita</li>
+  </ul>
+  <p>Estos datos nunca se envían a ningún servidor. Puedes eliminarlos en cualquier momento desinstalando la extensión.</p>
+
+  <h2>5. Licencias Pro</h2>
+  <p>Si adquieres Scope Pro, el proceso de pago lo gestiona Lemon Squeezy, un proveedor de pagos externo. Consulta su <a href="https://www.lemonsqueezy.com/privacy" target="_blank">política de privacidad</a> para entender cómo tratan tus datos de pago. Nosotros solo recibimos la confirmación de que la licencia es válida.</p>
+
+  <h2>6. Servicios de terceros</h2>
+  <p>La extensión interactúa con los siguientes servicios externos, exclusivamente para analizar el sitio que estás visitando:</p>
+  <ul>
+    <li><strong>Google Safe Browsing API</strong> — <a href="https://policies.google.com/privacy" target="_blank">Política de Google</a></li>
+    <li><strong>VirusTotal API</strong> — <a href="https://www.virustotal.com/gui/help/privacy-policy" target="_blank">Política de VirusTotal</a></li>
+    <li><strong>RDAP.org</strong> — Servicio público de ICANN, sin política de privacidad específica (servicio de consulta pública)</li>
+    <li><strong>Cloudflare Workers</strong> — Nuestro servidor intermediario, sin logging de peticiones habilitado. <a href="https://www.cloudflare.com/privacypolicy/" target="_blank">Política de Cloudflare</a></li>
+  </ul>
+
+  <h2>7. Cambios en esta política</h2>
+  <p>Si realizamos cambios significativos, actualizaremos la fecha en la parte superior de esta página. Los cambios que afecten al tratamiento de datos serán comunicados a través de las notas de actualización de la extensión en el Chrome Web Store.</p>
+
+  <h2>8. Contacto</h2>
+  <p>Para cualquier pregunta sobre privacidad: <a href="mailto:hola@getscope.app">hola@getscope.app</a></p>
+</main>
+<footer>
+  <p><a href="/">Scope</a> · <a href="mailto:hola@getscope.app">hola@getscope.app</a></p>
+</footer>
+</body>
+</html>
